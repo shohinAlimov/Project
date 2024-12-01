@@ -1,0 +1,18 @@
+/* GLobal */
+/* --------------------------------------- */
+@import "./styles/global/_container";
+@import "./styles/global/_normalize";
+@import "./styles/global/_mixins";
+@import "./styles/global/_reboot";
+@import "./styles/global/_variables";
+@import "./styles/global/_visually-hidden";
+@import "./styles/global/_fonts";
+
+/* Blocks */
+/* --------------------------------------- */
+@import "./styles/blocks/_header";
+@import "./styles/blocks/_aside";
+@import "./styles/blocks/_custom-search";
+@import "./styles/blocks/_main-container";
+@import "./styles/blocks/_music-page";
+@import "./styles/blocks/_table"

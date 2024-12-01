@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeCastStudio</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <aside class="aside">
+    <a class="aside__logo-link" href="#">
+      <svg class="aside__logo" width="185" height="31" aria-hidden="true">
+        <use xlink:href="./src/images/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <nav class="aside__nav">
+      <ul class="aside__list">
+        <li class="aside__item">
+          <a class="aside__link" href="#">
+            <svg class="aside__link-icon" width="32" height="32" aria-hidden="true">
+              <use xlink:href="./src/images/sprite.svg#icon-music-notes"></use>
+            </svg>
+            Избранное
+          </a>
+        </li>
+        <li class="aside__item">
+          <a class="aside__link aside__link--active" href="#">
+            <svg class="aside__link-icon" width="32" height="32" aria-hidden="true">
+              <use xlink:href="./src/images/sprite.svg#icon-music-notes"></use>
+            </svg>
+            Аудиокомпозиции
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-container">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__search">
+            <svg class="header__search-icon" width="24" height="24" aria-hidden="true">
+              <use xlink:href="./src/images/sprite.svg#icon-search"></use>
+            </svg>
+            <input class="custom-search" type="text" placeholder="Что будем искать?">
+          </div>
+          <a href="#" class="header__user">
+            <div class="header__user-wrapper">
+              <img src="./src/images/user-logo.png" width="42" height="42" alt="User's logo">
+              <span class="header__user-name">username</span>
+            </div>
+            <svg class="header__user-icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="./src/images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="music-page">
+        <h1 class="visually-hidden">Сайт с Аудиофайлами и треками</h1>
+        <div class="container">
+          <h2 class="music-page__title">Аудиофайлы и треки</h2>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+
+</body>
+
+</html>
