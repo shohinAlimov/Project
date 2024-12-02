@@ -1,0 +1,17 @@
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  &__level {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: #E8E8E8;
+    border-radius: 39px;
+    transition: height 0.1s;
+    cursor: inherit;
+
+    &::-webkit-slider-thumb {}
+  }
+}

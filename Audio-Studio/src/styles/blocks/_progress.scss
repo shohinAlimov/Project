@@ -1,0 +1,32 @@
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  &__bar {
+    width: 100vw;
+    max-width: 609px;
+    background-color: #E8E8E8;
+    border-radius: 75px;
+    height: 6px;
+    cursor: pointer;
+
+    &-count {
+      width: 174px;
+      height: 6px;
+      background-color: $color-burnt-orange;
+      border-radius: 75px;
+    }
+  }
+
+
+
+  &__count {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.23px;
+    letter-spacing: 0.015em;
+    color: $color-almost-gray;
+  }
+}

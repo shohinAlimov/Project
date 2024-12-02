@@ -1,0 +1,131 @@
+.music-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__heading {
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  &__header {
+    padding: 10px 0 10px 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.09em;
+    color: $color-dark-gray;
+    text-transform: uppercase;
+    max-height: 32px;
+  }
+
+  &__block {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+
+    &--number {
+      max-width: 40px;
+      color: $color-nero;
+    }
+
+    &--name {
+      max-width: 434px;
+    }
+
+    &--album {
+      max-width: 262px;
+      white-space: nowrap; // Prevent wrapping to a new line
+      overflow: hidden; // Hide overflow text
+      text-overflow: ellipsis; // Add ellipsis ("...") for overflow text
+    }
+
+    &--data {
+      max-width: 239px;
+    }
+
+    &--duration {
+      max-width: 99px;
+    }
+
+  }
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__item {
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 13.6px 0;
+  }
+
+  &__music {
+    display: flex;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-nero;
+
+    &--gray {
+      color: $color-dark-gray;
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-dark-gray;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  &__button-heart,
+  &__button-dots {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button-heart {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__button-dots {
+    width: 23px;
+    height: 4px;
+  }
+
+  &__icon {
+    color: $color-burnt-orange;
+    /* color: transparent;
+    stroke: $color-dark-gray; */
+  }
+}

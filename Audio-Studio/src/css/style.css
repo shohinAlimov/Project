@@ -5,6 +5,10 @@
   margin: 0 auto;
   padding: 0 30px 0 46px;
 }
+.container--player {
+  max-width: 1440px;
+  padding: 0 30px;
+}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -455,6 +459,20 @@ textarea {
   color: #FC6D3E;
 }
 
+.aside {
+  position: relative;
+  margin: 0 0 100px 0;
+}
+.aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F5F5F5;
+  z-index: -1;
+}
 .aside__logo-link {
   display: flex;
   align-items: center;
@@ -462,6 +480,7 @@ textarea {
   max-width: 184px;
   position: relative;
   box-sizing: unset;
+  background-color: #fff;
 }
 .aside__logo-link::after {
   content: "";
@@ -475,7 +494,6 @@ textarea {
   padding: 35px 0 0 0;
   max-width: 290px;
   background-color: #F5F5F5;
-  height: 100vh;
 }
 .aside__list {
   display: flex;
@@ -553,57 +571,241 @@ textarea {
   margin: 0 0 22px;
 }
 
-.table__row {
-  display: grid;
-  grid-template-columns: 50px 2fr 2fr 1fr 1fr 0.5fr;
-  /* Adjust the column sizes */
-  padding: 14px 20px;
-  /* Add consistent padding */
-  align-items: center;
-  /* Center-align content vertically */
-  border-bottom: 1px solid #e8e8e8;
-  background-color: transparent;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-.table__row:hover {
-  background-color: #f9f9f9;
-}
-.table__row:focus {
-  outline: 2px solid #ddd;
-}
-.table__col {
-  padding: 0 10px;
-}
-.table__col--title {
+.music-list {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-.table__col--title .title__name {
-  font-weight: 600;
-  font-size: 14px;
+.music-list__heading {
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
 }
-.table__col--title .title__artist {
+.music-list__header {
+  padding: 10px 0 10px 8px;
   font-size: 12px;
-  color: #666;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.09em;
+  color: #A4A4A4;
+  text-transform: uppercase;
+  max-height: 32px;
 }
-.table__col--actions {
+.music-list__block {
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+}
+.music-list__block--number {
+  max-width: 40px;
+  color: #171717;
+}
+.music-list__block--name {
+  max-width: 434px;
+}
+.music-list__block--album {
+  max-width: 262px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.music-list__block--data {
+  max-width: 239px;
+}
+.music-list__block--duration {
+  max-width: 99px;
+}
+.music-list__img {
+  margin-right: 10px;
+}
+.music-list__item {
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 13.6px 0;
+}
+.music-list__music {
+  display: flex;
+}
+.music-list__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.music-list__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color: #171717;
+}
+.music-list__text--gray {
+  color: #A4A4A4;
+}
+.music-list__desc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color: #A4A4A4;
+}
+.music-list__group {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10px;
 }
-.table__col--actions .action__button {
-  background: none;
+.music-list__button-heart, .music-list__button-dots {
+  background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.table__col--actions .action__button--favorite {
-  color: red;
+.music-list__button-heart {
+  width: 24px;
+  height: 24px;
 }
-.table__col--actions .action__button--menu {
-  color: #888;
+.music-list__button-dots {
+  width: 23px;
+  height: 4px;
+}
+.music-list__icon {
+  color: #FC6D3E;
+  /* color: transparent;
+  stroke: $color-dark-gray; */
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  padding: 6px 0;
+  border-top: 1px solid #E8E8E8;
+}
+.player__container {
+  display: flex;
+  align-items: flex-end;
+  gap: 86px;
+}
+.player__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 8px;
+  width: 100%;
+  max-width: 434px;
+}
+.player__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.player__music-char {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.player__button-heart {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player__icon-heart {
+  color: #FC6D3E;
+}
+.player__music-name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color: #171717;
+}
+.player__music-author {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color: #AAAAAA;
+}
+
+.manage-audio {
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.manage-audio__buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0 0 6px 0;
+}
+.manage-audio__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.progress__bar {
+  width: 100vw;
+  max-width: 609px;
+  background-color: #E8E8E8;
+  border-radius: 75px;
+  height: 6px;
+  cursor: pointer;
+}
+.progress__bar-count {
+  width: 174px;
+  height: 6px;
+  background-color: #FC6D3E;
+  border-radius: 75px;
+}
+.progress__count {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.23px;
+  letter-spacing: 0.015em;
+  color: #AAAAAA;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.slider__level {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 6px;
+  background-color: #E8E8E8;
+  border-radius: 39px;
+  transition: height 0.1s;
+  cursor: inherit;
 }/*# sourceMappingURL=style.css.map */
