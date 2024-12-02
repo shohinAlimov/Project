@@ -1,0 +1,18 @@
+.custom-search {
+  padding: 15px 14px 15px 44px;
+  border: none;
+  border-radius: 30px;
+  background-color: $color-white-smoke;
+  outline: none;
+  height: 53px;
+  width: 100vw;
+  max-width: 798px;
+
+  &::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+}

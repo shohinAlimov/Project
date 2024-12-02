@@ -1,0 +1,68 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $color-white;
+  width: 100vw;
+  padding: 6px 0;
+  border-top: 1px solid #E8E8E8;
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    //justify-content: space-between;
+    gap: 86px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 8px;
+    width: 100%;
+    max-width: 434px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__music-char {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__button-heart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-heart {
+    color: $color-burnt-orange;
+  }
+
+  &__music-name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-nero;
+  }
+
+  &__music-author {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-almost-gray;
+  }
+}
