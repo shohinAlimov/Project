@@ -1,15 +1,13 @@
 .header {
   padding: 15px 0 0;
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-  }
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
 
   &__search {
     position: relative;
+    width: 100%;
 
     &-icon {
       position: absolute;
@@ -25,9 +23,9 @@
     border-radius: 30px;
     background-color: $color-white-smoke;
     outline: none;
+    width: 100%;
+    max-width: 250px;
     height: 53px;
-    width: 100vw;
-    max-width: 798px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,6 +48,4 @@
       color: $color-burnt-orange ;
     }
   }
-
-
 }

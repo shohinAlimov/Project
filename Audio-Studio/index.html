@@ -37,328 +37,370 @@
     </nav>
   </aside>
 
-  <div class="main-container">
+  <div class="container">
     <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="header__search">
-            <svg class="header__search-icon" width="24" height="24" aria-hidden="true">
-              <use xlink:href="./src/images/sprite.svg#icon-search"></use>
-            </svg>
-            <input class="custom-search" type="text" placeholder="Что будем искать?">
-          </div>
-          <a href="#" class="header__user">
-            <div class="header__user-wrapper">
-              <img src="./src/images/user-logo.png" width="42" height="42" alt="User's logo">
-              <span class="header__user-name">username</span>
-            </div>
-            <svg class="header__user-icon" width="16" height="16" aria-hidden="true">
-              <use xlink:href="./src/images/sprite.svg#icon-arrow-right"></use>
-            </svg>
-          </a>
-        </div>
+      <div class="header__search">
+        <svg class="header__search-icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="./src/images/sprite.svg#icon-search"></use>
+        </svg>
+        <input class="custom-search" type="text" placeholder="Что будем искать?">
       </div>
+      <a href="#" class="header__user">
+        <div class="header__user-wrapper">
+          <img src="./src/images/user-logo.png" width="42" height="42" alt="User's logo">
+          <span class="header__user-name">username</span>
+        </div>
+        <svg class="header__user-icon" width="16" height="16" aria-hidden="true">
+          <use xlink:href="./src/images/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </a>
     </header>
 
     <main>
       <section class="music-page">
         <h1 class="visually-hidden">Сайт с Аудиофайлами и треками</h1>
-        <div class="container">
-          <h2 class="music-page__title">Аудиофайлы и треки</h2>
-          <ul class="music-list">
-            <li class="music-list__heading">
-              <span class="music-list__block music-list__header music-list__block--number">&#8470;</span>
-              <span class="music-list__block music-list__header music-list__block--name">Название</span>
-              <span class="music-list__block music-list__header music-list__block--album">АЛЬБОМ</span>
-              <span class="music-list__block music-list__header music-list__block--data">
-                <svg class="music-list__icon-header" width="16" height="16" aria-hidden="true">
+        <h2 class="music-page__title">Аудиофайлы и треки</h2>
+        <table class="music-table">
+          <thead>
+            <tr class="music-table__row">
+              <th class="music-table__header music-table__header--num">&#8470;</th>
+              <th class="music-table__header music-table__header--name">Название</th>
+              <th class="music-table__header music-table__header--album">АЛЬБОМ</th>
+              <th class="music-table__header music-table__header--calendar">
+                <svg class="music-table__icon-header" width="16" height="16" aria-hidden="true">
                   <use xlink:href="./src/images/sprite.svg#icon-calendar"></use>
                 </svg>
-              </span>
-              <span class="music-list__block music-list__header music-list__block--duration">
-                <svg class="music-list__icon-clock" width="16" height="16" aria-hidden="true">
+              </th>
+              <th class="music-table__header music-table__header--clock">
+                <svg class="music-table__icon-clock" width="16" height="16" aria-hidden="true">
                   <use xlink:href="./src/images/sprite.svg#icon-clock"></use>
                 </svg>
-              </span>
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">1</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">In Bloom</span>
-                    <span class="music-list__desc">Nirvana</span>
-                  </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  Nirvana
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">6 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
-
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">2</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/coolio-logo.jpg" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Gangsta's Paradise</span>
-                    <span class="music-list__desc">Coolio, L.V.</span>
-                  </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  Gangsta's Paradise
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">7 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
+              </td>
+            </tr>
 
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">3</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/default-logo.png" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Разговоры о животных</span>
-                    <span class="music-list__desc">Подкаст-студия Константина Петрова</span>
-                  </span>
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  -
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">7 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
-
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">4</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/Grace-logo.jpg" width="60" height="60" alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Animal I Have Become</span>
-                    <span class="music-list__desc">Three Days Grace</span>
-                  </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  One-X
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">7 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
+              </td>
+            </tr>
 
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">5</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/default-logo.png" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Comic news</span>
-                    <span class="music-list__desc">Команда КВН Плохие новости</span>
-                  </span>
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  -
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">8 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
-
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">6</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/Maybeshewill-logo.jpg" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">To The Skies From A Hillside</span>
-                    <span class="music-list__desc">Maybeshewill</span>
-                  </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  To The Skies From A Hillside
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">9 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
+              </td>
+            </tr>
 
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">7</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/Maybeshewill-logo-2.jpg" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Co-Conspirators</span>
-                    <span class="music-list__desc">Maybeshewill</span>
-                  </span>
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  Sing The Word Hope In Four​-​Part H...
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">9 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
-                </button>
-              </div>
-
-            </li>
-
-            <li class="music-list__item">
-              <a href="#" class="music-list__music">
-                <span class="music-list__block music-list__block--number">8</span>
-                <div class="music-list__wrapper music-list__block music-list__block--name">
-                  <img class="music-list__img" src="./src/images/Placebo-logo.jpg" width="60" height="60"
-                    alt="User logo">
-                  <span class="music-list__inner">
-                    <span class="music-list__text">Surrounded By Spies</span>
-                    <span class="music-list__desc">Placebo</span>
-                  </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
                 </div>
-                <span class="music-list__text music-list__block music-list__block--album">
-                  Surrounded By Spies
-                </span>
-              </a>
-              <div class="music-list__group music-list__block music-list__block--data">
-                <span class="music-list__text music-list__text--gray">10 дней назад</span>
-                <button class="music-list__button-heart" type="button">
-                  <svg class="music-list__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
-                  </svg>
+              </td>
+            </tr>
+
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
                 </button>
-              </div>
-              <div class="music-list__group music-list__block music-list__block--duration">
-                <span class="music-list__text music-list__text--gray">5:35</span>
-                <button class="music-list__button-dots" type="button">
-                  <svg class="" width="23" height="4" aria-hidden="true">
-                    <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
-                  </svg>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
                 </button>
-              </div>
-            </li>
-          </ul>
-        </div>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="music-table__row">
+              <td class="music-table__cell">1</td>
+              <td class="music-table__cell music-table__cell--button">
+                <button class="music-table__button" type="button">
+                  <div class="music-table__wrapper">
+                    <img class="music-table__img" src="./src/images/nirvana-logo.jpg" width="60" height="60"
+                      alt="User logo">
+                    <div class="music-table__inner">
+                      <span class="music-table__text">In Bloom</span>
+                      <span class="music-table__desc">Nirvana</span>
+                    </div>
+                  </div>
+                </button>
+              </td>
+              <td class="music-table__cell">
+                <span class="music-table__text">Nirvana </span>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">6 дней назад</span>
+                  <button class="music-table__button-heart" type="button">
+                    <svg class="music-table__icon-heart" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+              <td class="music-table__cell">
+                <div class="music-table__group">
+                  <span class="music-table__text music-table__text--gray">5:35</span>
+                  <button class="music-table__button-dots" type="button">
+                    <svg class="" width="23" height="4" aria-hidden="true">
+                      <use xlink:href="./src/images/sprite.svg#icon-dots"></use>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Repeat <tr> blocks for each music item -->
+          </tbody>
+        </table>
+
       </section>
     </main>
   </div>
 
   <div class="player">
-    <div class="container container--player">
+    <div class="player__block">
       <div class="player__container">
         <div class="player__wrapper">
           <img src="./src/images/Ludovico-logo.jpg" width="60" height="60" alt="music logo">
@@ -417,15 +459,15 @@
           <svg class="slider__icon" width="16" height="16" aria-hidden="true">
             <use xlink:href="./src/images/sprite.svg#icon-speaker-low"></use>
           </svg>
-          <label class="slider__label" for="">
-            <input class="slider__level" type="range" name="" id="">
+          <label class="slider__label" for="volume-slider">
+            <input class="slider__level" type="range" min="0" max="100" value="50" id="volume-slider" />
           </label>
+          <!-- <span class="slider__volume-display">50</span> -->
         </div>
+
       </div>
     </div>
   </div>
-
-
 </body>
 
 </html>

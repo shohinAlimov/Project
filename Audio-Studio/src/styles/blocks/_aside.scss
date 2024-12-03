@@ -1,6 +1,17 @@
 .aside {
-  position: relative;
-  margin: 0 0 100px 0;
+  position: fixed;
+  /* Фиксируем aside */
+  top: 0;
+  left: 0;
+  width: 290px;
+  /* Ширина боковой панели */
+  height: 100vh;
+  /* Высота на весь экран */
+  background-color: $color-white-smoke;
+  z-index: 10;
+  /* Поверх остальных элементов */
+  overflow-y: auto;
+  /* Прокрутка, если контент длинный */
 
   &::before {
     content: "";
@@ -8,9 +19,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $color-white-smoke;
+    /* Тот же цвет, чтобы не было наложений */
     z-index: -1;
+    /* Псевдоэлемент остается под основным блоком */
   }
 
   &__logo-link {
