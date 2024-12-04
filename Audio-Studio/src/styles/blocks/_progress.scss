@@ -9,7 +9,7 @@
     max-width: 609px;
     background-color: #E8E8E8;
     border-radius: 75px;
-    height: 6px;
+    height: 4px;
     cursor: pointer;
 
     @media (max-width: 1220px) {
@@ -30,7 +30,7 @@
 
     &-count {
       width: 174px;
-      height: 6px;
+      height: 4px;
       background-color: $color-burnt-orange;
       border-radius: 75px;
     }

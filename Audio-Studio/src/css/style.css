@@ -397,6 +397,7 @@ body {
 
 main {
   flex-grow: 1;
+  margin: 0 0 100px 0;
 }
 
 img {
@@ -715,6 +716,14 @@ textarea {
     display: none;
   }
 }
+@media (max-width: 550px) {
+  .music-table__tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+}
 .music-table__cell {
   border-bottom: 1px solid #ddd;
   padding: 8px;
@@ -725,6 +734,7 @@ textarea {
     border: none;
     padding: 0 10px 0 0;
     background-color: #ffffff;
+    width: 100%;
   }
 }
 .music-table__cell--hidden {
@@ -915,33 +925,56 @@ textarea {
   border-top: 1px solid #E8E8E8;
   z-index: 100;
 }
+@media (max-width: 770px) {
+  .player {
+    padding: 0;
+  }
+}
 .player__block {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.player__btn-continue {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: none;
+}
+@media (max-width: 770px) {
+  .player__btn-continue {
+    display: flex;
+  }
 }
 .player__container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 @media (max-width: 770px) {
   .player__container {
     flex-direction: column;
     align-items: center;
     gap: unset;
+    padding: 0 8px;
   }
 }
 .player__wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   padding: 14px 8px;
 }
 @media (max-width: 770px) {
   .player__wrapper {
-    padding: 14px 0;
+    padding: 14px 0 0;
     gap: 20px;
     justify-content: space-between;
   }
@@ -954,12 +987,7 @@ textarea {
 }
 @media (max-width: 520px) {
   .player__inner {
-    max-width: 200px;
-  }
-}
-@media (max-width: 390px) {
-  .player__inner {
-    max-width: 150px;
+    max-width: 205px;
   }
 }
 .player__music-char {
@@ -1066,6 +1094,11 @@ textarea {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 770px) {
+  .manage-audio {
+    margin: 16px 0;
+  }
+}
 .manage-audio__buttons {
   display: flex;
   gap: 20px;
@@ -1110,7 +1143,7 @@ textarea {
   max-width: 609px;
   background-color: #E8E8E8;
   border-radius: 75px;
-  height: 6px;
+  height: 4px;
   cursor: pointer;
 }
 @media (max-width: 1220px) {
@@ -1135,7 +1168,7 @@ textarea {
 }
 .progress__bar-count {
   width: 174px;
-  height: 6px;
+  height: 4px;
   background-color: #FC6D3E;
   border-radius: 75px;
 }
@@ -1224,6 +1257,7 @@ textarea {
 @media (max-width: 400px) {
   .quick-nav__list {
     justify-content: space-between;
+    gap: unset;
   }
 }
 .quick-nav__link {

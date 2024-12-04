@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 770px) {
+    margin: 16px 0;
+  }
+
   &__buttons {
     display: flex;
     gap: 20px;
