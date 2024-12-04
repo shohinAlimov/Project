@@ -1,17 +1,21 @@
 .aside {
   position: fixed;
-  /* Фиксируем aside */
   top: 0;
   left: 0;
   width: 290px;
-  /* Ширина боковой панели */
   height: 100vh;
-  /* Высота на весь экран */
   background-color: $color-white-smoke;
   z-index: 10;
-  /* Поверх остальных элементов */
   overflow-y: auto;
-  /* Прокрутка, если контент длинный */
+
+  @media (max-width: 1180px) {
+    width: 250px;
+  }
+
+  @media (max-width: 950px) {
+    display: none;
+  }
+
 
   &::before {
     content: "";
@@ -21,16 +25,15 @@
     width: 100%;
     height: 100%;
     background-color: $color-white-smoke;
-    /* Тот же цвет, чтобы не было наложений */
     z-index: -1;
-    /* Псевдоэлемент остается под основным блоком */
   }
 
   &__logo-link {
     display: flex;
     align-items: center;
-    padding: 20px 53px;
-    max-width: 184px;
+    justify-content: center;
+    padding: 20px 0;
+    max-width: 290px;
     position: relative;
     box-sizing: unset;
     background-color: #fff;
@@ -79,6 +82,12 @@
     width: 100%;
     background-color: $color-white-smoke ;
 
+    @media (max-width: 1180px) {
+      font-size: 16px;
+      line-height: 20px;
+      width: 100%;
+    }
+
     &--active,
     &:hover {
       background-color: $color-white;
@@ -86,6 +95,11 @@
 
     &-icon {
       color: $color-burnt-orange;
+
+      @media (max-width: 1180px) {
+        width: 29px;
+        height: 29px;
+      }
     }
   }
 

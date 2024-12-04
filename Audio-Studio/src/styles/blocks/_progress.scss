@@ -9,18 +9,32 @@
     max-width: 609px;
     background-color: #E8E8E8;
     border-radius: 75px;
-    height: 6px;
+    height: 4px;
     cursor: pointer;
+
+    @media (max-width: 1220px) {
+      max-width: 550px;
+    }
+
+    @media (max-width: 1100px) {
+      max-width: 480px;
+    }
+
+    @media (max-width: 960px) {
+      max-width: 400px;
+    }
+
+    @media (max-width: 520px) {
+      max-width: 260px;
+    }
 
     &-count {
       width: 174px;
-      height: 6px;
+      height: 4px;
       background-color: $color-burnt-orange;
       border-radius: 75px;
     }
   }
-
-
 
   &__count {
     font-size: 11px;

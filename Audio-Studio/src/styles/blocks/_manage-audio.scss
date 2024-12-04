@@ -5,11 +5,23 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 770px) {
+    margin: 16px 0;
+  }
+
   &__buttons {
     display: flex;
     gap: 20px;
     align-items: center;
     margin: 0 0 6px 0;
+
+    @media (max-width: 960px) {
+      margin: 0 0 10px 0;
+    }
+
+    @media (max-width: 770px) {
+      display: none;
+    }
   }
 
   &__btn {
@@ -21,5 +33,12 @@
     border: none;
     background: transparent;
     cursor: pointer;
+  }
+
+  &__icon-continue {
+    @media (max-width:960px) {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
