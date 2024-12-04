@@ -17,9 +17,14 @@
   &__container {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
-    //justify-content: space-between;
-    gap: 86px;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (max-width:770px) {
+      flex-direction: column;
+      align-items: center;
+      gap: unset;
+    }
   }
 
   &__wrapper {
@@ -27,14 +32,27 @@
     align-items: center;
     gap: 10px;
     padding: 14px 8px;
-    width: 100%;
-    max-width: 434px;
+
+    @media (max-width: 770px) {
+      padding: 14px 0;
+      gap: 20px;
+      justify-content: space-between;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 303px;
+
+    @media (max-width: 520px) {
+      max-width: 200px;
+    }
+
+    @media (max-width: 390px) {
+      max-width: 150px;
+    }
   }
 
   &__music-char {
@@ -64,6 +82,10 @@
     line-height: 12px;
     letter-spacing: 0.01em;
     color: $color-nero;
+
+    @media (max-width: 1050px) {
+      line-height: 14px;
+    }
   }
 
   &__music-author {
@@ -72,5 +94,59 @@
     line-height: 12px;
     letter-spacing: 0.01em;
     color: $color-almost-gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    max-width: 100%;
+
+    @media (max-width: 1290px) {
+      max-width: 250px;
+    }
+
+    @media (max-width: 1220px) {
+      max-width: 180px;
+    }
+
+    @media (max-width: 1050px) {
+      max-width: 120px;
+    }
+
+    @media (max-width:890px) {
+      max-width: 230px;
+    }
+
+    @media (max-width: 850px) {
+      max-width: 150px;
+    }
+
+    @media (max-width: 800px) {
+      max-width: 100px;
+    }
+
+    @media (max-width: 770px) {
+      max-width: 100%;
+    }
+  }
+
+  &__audio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 770px) {
+      display: flex;
+    }
+  }
+
+  &__audio-btn svg {
+    width: 35px;
+    height: 35px;
   }
 }

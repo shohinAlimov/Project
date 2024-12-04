@@ -2,13 +2,41 @@
   border-collapse: collapse;
   table-layout: auto;
 
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+
+  &__heading {
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
   &__cell {
     border-bottom: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 
+    @media (max-width: 550px) {
+      border: none;
+      padding: 0 10px 0 0;
+      background-color: $color-white;
+    }
+
+    &--hidden {
+      display: none;
+
+      @media (max-width: 550px) {
+        display: flex;
+      }
+    }
+
     &--button {
       padding: 0 8px;
+
+      @media (max-width: 550px) {
+        padding: 0;
+      }
     }
   }
 
@@ -16,6 +44,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    & .music-table__text {
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 550px) {
+      gap: 10px;
+      justify-content: flex-end;
+    }
+  }
+
+  &__row td:nth-child(4) {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__row td:nth-child(1),
+  &__row td:nth-child(3) {
+
+    @media (max-width: 550px) {
+      display: none;
+    }
   }
 
   &__header {
@@ -44,10 +97,18 @@
 
     &--calendar {
       max-width: 239px;
+
+      @include vp-767 {
+        display: none;
+      }
     }
 
     &--clock {
       max-width: 99px;
+
+      @media (max-width: 768px) {
+        max-width: 170px;
+      }
     }
   }
 
@@ -61,20 +122,36 @@
     display: flex;
     padding: 13px 0;
     border: none;
+
+    @media (max-width: 550px) {
+      padding: 0;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    & .music-table__button-heart {
+      display: none;
+
+      @media (max-width: 550px) {
+        display: flex;
+      }
+    }
   }
 
   &__img {
-    border-radius: 4px;
+    @media (max-width: 550px) {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   &__button-heart,
   &__button-dots {
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
@@ -82,6 +159,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__button-dots {
+    & svg {
+      @media (max-width: 550px) {
+        width: 17px;
+        height: 4px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: 550px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__button-heart--alternate {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
   }
 
   &__inner {

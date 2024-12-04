@@ -1,0 +1,39 @@
+.quick-nav {
+  display: none;
+
+  @media (max-width:950px) {
+    padding: 20px 0 0;
+    display: block;
+    justify-content: space-between;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+
+    @media (max-width: 400px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    padding: 16px;
+    background-color: $color-white;
+    color: $color-nero;
+    border-radius: 30px;
+
+    &--active {
+      padding: 10px 14px;
+      display: flex;
+      gap: 8px;
+      background-color: $color-burnt-orange;
+      color: $color-white;
+    }
+
+  }
+
+}

@@ -20,6 +20,18 @@ body {
   color: $color-black;
   background-color: $color-white;
   padding-left: 290px;
+
+  @media (max-width: 1180px) {
+    padding-left: 250px;
+  }
+
+  @media (max-width: 950px) {
+    padding-left: unset;
+  }
+
+  @media (max-width: 950px) {
+    background-color: $color-white-smoke;
+  }
 }
 
 main {
